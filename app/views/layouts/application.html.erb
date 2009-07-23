@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>PhoneBook App</title>
+    <%= stylesheet_link_tag 'layout' %>
+    <%= stylesheet_link_tag 'error' %>
+    <%= stylesheet_link_tag 'table' %>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <ul id="sidebar-items">
+          <li>
+            <h3>PhoneBook App</h3>
+            <ul class="links">
+              <li><%= link_to 'Home', root_path %></li>
+              <li><%= link_to 'Contacts', search_url %></li>
+              <li><%= link_to 'Companies', companies_path %></li>
+            </ul>
+          </li>
+        </ul>
+      
+        <ul id="search-box">
+          <li>
+            <h3>Search Contacts</h3>
+            <ul class="links">
+              <li>
+                <% form_tag search_url, :method => :get do -%>
+                  <p><%= text_field_tag 'q' %></p>
+                  <p><%= submit_tag 'Search' %></p>
+                <% end %>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <br />
+        <ul id="copyright">
+          <li>
+            &copy; <%= link_to 'Jason Lambert', 'http://www.mendable.com/' %> <%= Time.now.year %>
+          </li>
+        </ul>
+      </div>
+
+      <div id="content">
+        <p style="color: green"><%= flash[:notice] %></p>
+        <%= yield %>
+        <div id="footer">&nbsp;</div>
+      </div>
+    </div>
+  </body>
+</html>

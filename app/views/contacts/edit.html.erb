@@ -1,0 +1,14 @@
+<h1>Editing contact</h1>
+
+<% form_for([@company, @contact], :html => {:multipart => true}) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', [@contact.company, @contact] %> |
+<%= link_to 'Back', company_contacts_path(@contact.company) %>

@@ -1,0 +1,25 @@
+<h1><%=h @company.name %></h1>
+<p>
+  <b>Address1:</b>
+  <%=h @company.address1 %>
+</p>
+
+<p>
+  <b>Town:</b>
+  <%=h @company.town %>
+</p>
+
+<p>
+  <b>County:</b>
+  <%=h @company.county %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%=h @company.postcode %>
+</p>
+
+
+<%= link_to 'Contacts', company_contacts_path(@company) %> |
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

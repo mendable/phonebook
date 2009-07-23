@@ -1,0 +1,6 @@
+<h1>Listing contacts for '<%=h @company.name %>'</h1>
+
+<%= render :partial => 'shared/contacts_table', :locals => {:contacts => @contacts} %>
+
+<br /><br />
+<%= link_to 'New contact', new_company_contact_path %>

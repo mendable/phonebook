@@ -1,0 +1,26 @@
+<h1>Welcome to PhoneBook App!</h1>
+<p>
+  This is a simple RESTful application showing an example Phonebook application used to maintain a directory of companies and contacts known at those companies.
+</p>
+<p>
+  This app was written as an answer to a New Rails Developer exercise at an un-named company.
+</p>
+
+
+<h2>Testing and Development</h2>
+<p>
+  This app was developed using Test Driven Development, and the really useful <%= link_to 'Shoulda', 'http://www.thoughtbot.com/projects/shoulda/' %> tool was used to help develop the tests quickly and clearly. To see a full list of everything being tested, use <code>rake shoulda:list</code>.
+</p>
+<p>
+  I opted for <%= link_to 'PaperClip', 'http://www.thoughtbot.com/projects/paperclip' %> as the contact photo attachment method (over <%= link_to 'attachment_fu', 'http://github.com/technoweenie/attachment_fu' %>) on the basis that only one image was needed to be uploaded for each contact, and PaperClip in my opinion was a natural choice for this.
+</p>
+<p>
+  Pagination of the contacts list was achived using the <%= link_to 'will_paginate', 'http://wiki.github.com/mislav/will_paginate' %> plugin.
+</p>
+
+<h2>Dependencies</h2>
+<p>
+  There are several gem dependencies, use <code>sudo rake gems:install</code> before attempting to run this app.
+</p>
+
+

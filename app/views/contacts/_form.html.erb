@@ -1,0 +1,24 @@
+  <p>
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname %> <%= required_field %>
+  </p>
+  <p>
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %> <%= required_field %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %> <%= required_field %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %> <%= required_field %>
+  </p>
+  <p>
+    <%= f.label :company %><br />
+    <%= f.select :company_id, Company.find(:all).collect{|x| [x.name, x.id]} %> <%= required_field %>
+  </p>
+  <p>
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </p>
